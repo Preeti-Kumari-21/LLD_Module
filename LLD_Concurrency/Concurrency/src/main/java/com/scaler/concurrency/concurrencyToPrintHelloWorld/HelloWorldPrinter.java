@@ -1,4 +1,4 @@
-package com.scaler.concurrency;
+package com.scaler.concurrency.concurrencyToPrintHelloWorld;
 
 public class HelloWorldPrinter implements Runnable{
     @Override
