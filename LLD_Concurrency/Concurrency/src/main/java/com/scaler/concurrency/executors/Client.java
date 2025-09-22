@@ -10,5 +10,7 @@ public class Client {
         for (int i = 1; i <= 100; i++) {
             executorService.submit(new CreateExecutorClass(i));
         }
+
+        executorService.shutdown();
     }
 }
