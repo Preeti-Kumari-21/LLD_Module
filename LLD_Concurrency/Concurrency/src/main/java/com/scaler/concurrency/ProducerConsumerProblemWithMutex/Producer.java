@@ -1,6 +1,5 @@
-package com.scaler.concurrency.ProducerConsumerProblem;
+package com.scaler.concurrency.ProducerConsumerProblemWithMutex;
 
-import java.util.Objects;
 import java.util.Queue;
 
 public class Producer implements Runnable{
@@ -19,9 +18,11 @@ public class Producer implements Runnable{
     public void run() {
 
         while(true){
-            if(store.size() < maxSize){
-                System.out.println("Producer " + name + " produced an item. Store size: " + (store.size()));
-                store.add(new Object());
+            synchronized (store){
+                if(store.size() < maxSize){
+                    System.out.println("Producer " + name + " produced an item. Store size: " + (store.size()));
+                    store.add(new Object());
+                }
             }
         }
 

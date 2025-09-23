@@ -1,6 +1,5 @@
-package com.scaler.concurrency.ProducerConsumerProblem;
+package com.scaler.concurrency.ProducerConsumerProblemWithoutSolution;
 
-import java.util.Objects;
 import java.util.Queue;
 
 public class Consumer implements Runnable{
@@ -20,7 +19,7 @@ public class Consumer implements Runnable{
 
         while (true){
             if(store.size() > 0){
-                System.out.println("Consumer " + name + " consumed an item. Store size: " + (store.size()));
+               // System.out.println("Consumer " + name + " consumed an item. Store size: " + (store.size()));
                 store.remove();
             }
         }
