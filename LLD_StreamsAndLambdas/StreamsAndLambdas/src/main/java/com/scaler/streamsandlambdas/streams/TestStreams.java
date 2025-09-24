@@ -26,5 +26,12 @@ public class TestStreams {
         // Second Way
         System.out.println("\nThis is  Second Way");
         list.stream().filter((num) -> {return num % 2 == 0;}).forEach(num -> {System.out.print(num+" ");});
+        /*
+        * 1. First the list is converted into streams using list.stream()
+        * 2. Stream will now loop over each element of list
+        * 3. Every element of the list will now pass onto filter method as an input.
+        * 4. If the condition of the filter method returns true then that element will be taken into consideration and will be printed here in our case.
+        * 5. If the condition returns false then that element will not be considered like all odd numbers are discarded from printing
+        * */
     }
 }
