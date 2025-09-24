@@ -51,15 +51,12 @@ public class Client {
             System.out.println(car+" ");
         }
 
-        //Using Lambdas
 
+        //Using Lambdas
         Comparator<Car> comparator2 = (c1, c2) -> c2.price - c1.price;
         Collections.sort(cars,comparator2);
         for (Car car : cars) {
             System.out.println(car+"\n");
         }
-
-
-
     }
 }
