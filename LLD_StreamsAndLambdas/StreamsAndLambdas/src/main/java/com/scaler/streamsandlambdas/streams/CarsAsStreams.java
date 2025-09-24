@@ -26,5 +26,6 @@ public class CarsAsStreams {
         System.out.println("---------------------------------------------------\n");
 
         System.out.println(cars.stream().map((car) -> car.price > 1000).toList());
+
     }
 }
